@@ -1,0 +1,62 @@
+{
+  "event": {
+    "title": "AI NEXUS 2026",
+    "subtitle": "Build | Innovate | Transform",
+    "summary": "AI Nexus Hackathon 2026 by Future Prep Forum Club, aligned with the DevNetwork AI + ML Hackathon and AI DevSummit. It gives students a platform to design, prototype, and present AI-driven solutions across generative AI, machine learning, chatbots, and intelligent systems.",
+    "dates": [
+      "20 April 2026",
+      "21 April 2026"
+    ],
+    "venue": "D7 Open Area, D1 Auditorium",
+    "prizePool": 1625000,
+    "tracks": [
+      "Generative AI",
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Chatbots and Intelligent Systems"
+    ],
+    "organizers": "APEX (CSE)(AI & ML), Future Prep Forum Club, and CodeChef Chapter",
+    "contacts": [
+      {
+        "name": "Yasha Tasaneem",
+        "phone": "63875 11385",
+        "label": "Hackathon Coordinator"
+      },
+      {
+        "name": "Namit Sharma",
+        "phone": "98556 03243",
+        "label": "Technical Lead(Admin)"
+      }
+    ],
+    "photos": [
+      {
+        "imageUrl": "/uploads/1776157535536-1d7fa0f1fac7.jpeg",
+        "caption": "Glimpse from past Event"
+      }
+    ]
+  },
+  "judges": [
+    {
+      "name": "Mr. Rakesh Gahlot",
+      "companyName": "Mphasis Corporation",
+      "photoUrl": "/api/uploads/1776229071403-28a92a20b275.jpeg"
+    },
+    {
+      "name": "Amol M. Khadge",
+      "companyName": "MSR Technology Group",
+      "photoUrl": "/api/uploads/1776229456523-fb87dfde5608.jpeg"
+    },
+    {
+      "name": "Jafash Wadhwa",
+      "companyName": "Sapient",
+      "photoUrl": "/api/uploads/1776229455202-cb3fb6377c37.jpeg"
+    },
+    {
+      "name": "Manish Kumar Abhay Singh",
+      "companyName": "Mphasis Corporation",
+      "photoUrl": "/api/uploads/1776229453161-aa90ad6e329b.jpeg"
+    }
+  ],
+  "teams": [],
+  "games": []
+}

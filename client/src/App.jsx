@@ -21,7 +21,20 @@ function fetchJson(path, options) {
   }).then(async (response) => {
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(errorText || 'Request failed');
+      let errorMessage = 'Request failed';
+
+      if (errorText) {
+        try {
+          const parsedError = JSON.parse(errorText);
+          errorMessage = parsedError?.error || parsedError?.message || errorText;
+        } catch {
+          errorMessage = errorText;
+        }
+      }
+
+      const requestError = new Error(errorMessage);
+      requestError.status = response.status;
+      throw requestError;
     }
 
     return response.json();
@@ -280,6 +293,17 @@ function App() {
   const [judgePhotoUploadError, setJudgePhotoUploadError] = useState('');
   const [judgePhotoUploadingIndex, setJudgePhotoUploadingIndex] = useState(-1);
 
+  function resetAdminSession() {
+    setAdminToken('');
+    setAdminUser('');
+    localStorage.removeItem(adminTokenStorageKey);
+  }
+
+  function isUnauthorizedAdminError(error) {
+    const message = String(error?.message ?? '');
+    return error?.status === 401 || /unauthorized admin access/i.test(message);
+  }
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
@@ -411,6 +435,20 @@ function App() {
 
   const trackList = eventData?.tracks ?? [];
   const contactList = eventData?.contacts ?? [];
+  const aiVisualHighlights = [
+    {
+      title: 'Neural Pulse Stage',
+      tone: 'pulse'
+    },
+    {
+      title: 'Vision Forge Grid',
+      tone: 'forge'
+    },
+    {
+      title: 'Prompt Reactor Core',
+      tone: 'reactor'
+    }
+  ];
 
   const filteredLeaderboard = useMemo(() => {
     const query = leaderboardQuery.trim().toLowerCase();
@@ -488,6 +526,12 @@ function App() {
           : 'Submission rejected. No points were awarded.'
       );
     } catch (reviewError) {
+      if (isUnauthorizedAdminError(reviewError)) {
+        resetAdminSession();
+        setGameAdminError('Admin session expired. Please login again and retry.');
+        return;
+      }
+
       setGameAdminError(reviewError.message);
     }
   }
@@ -537,6 +581,12 @@ function App() {
       });
       setGameAdminMessage('Game posted successfully.');
     } catch (createError) {
+      if (isUnauthorizedAdminError(createError)) {
+        resetAdminSession();
+        setGameAdminError('Admin session expired. Please login again and retry.');
+        return;
+      }
+
       setGameAdminError(createError.message);
     }
   }
@@ -560,6 +610,12 @@ function App() {
       setRounds(response.rounds);
       setGameAdminMessage(acceptingEntries ? 'Game entry window reopened.' : 'Game entry window closed.');
     } catch (toggleError) {
+      if (isUnauthorizedAdminError(toggleError)) {
+        resetAdminSession();
+        setGameAdminError('Admin session expired. Please login again and retry.');
+        return;
+      }
+
       setGameAdminError(toggleError.message);
     }
   }
@@ -1218,11 +1274,16 @@ function App() {
       <header className="hero">
         <div className="hero-copy">
           <p className="eyebrow">AI NEXUS 2026</p>
-          <h1>{eventData?.subtitle ?? 'Build, innovate, and transform at Chandigarh University.'}</h1>
+          <h1>{eventData?.subtitle ?? 'Build the future with AI.'}</h1>
           <p className="hero-text">
             {eventData?.summary ??
-              'A 24-hour national hackathon aligned with AI DevSummit and ByteHunt, powered by a live round-based leaderboard and a judge showcase built for fast participant updates.'}
+              'A fast-paced hackathon with live scoring, AI challenges, and creator energy.'}
           </p>
+          <div className="hero-tags" aria-label="Event vibe tags">
+            <span>Future mode</span>
+            <span>Live scoring</span>
+            <span>AI first</span>
+          </div>
           <div className="hero-actions">
             <a className="primary-button" href="#leaderboard">
               View leaderboard
@@ -1236,7 +1297,6 @@ function App() {
         <div className="hero-card">
           <p className="hero-card-title">Event snapshot</p>
           <h2>{eventData?.title ?? 'AI NEXUS 2026'}</h2>
-          <p>Organised by {eventData?.organizers ?? 'Department of AIML-AIT CSE'}</p>
           <div className="stat-grid">
             {heroStats.map((stat) => (
               <article key={stat.label} className="stat-card">
@@ -1250,11 +1310,26 @@ function App() {
 
       <main className="content-grid">
 
+        {/* <section className="panel spotlight vibe-panel" aria-labelledby="visuals-heading">
+          <div className="section-heading">
+            <p className="eyebrow">Nexus visuals</p>
+            <h2 id="visuals-heading">Future AI environment</h2>
+          </div>
+          <div className="vibe-grid">
+            {aiVisualHighlights.map((visual) => (
+              <article key={visual.title} className={`vibe-card vibe-${visual.tone}`}>
+                <div className="vibe-glow" aria-hidden="true" />
+                <h3>{visual.title}</h3>
+              </article>
+            ))}
+          </div>
+        </section> */}
+
         <section className="panel" aria-labelledby="leaderboard-heading" id="leaderboard">
           <div className="section-heading compact">
             <div>
               <p className="eyebrow">Live leaderboard</p>
-              <h2 id="leaderboard-heading">Updated after every game round</h2>
+              <h2 id="leaderboard-heading">Real-time rankings</h2>
             </div>
             <span className="live-pill">Live</span>
           </div>
@@ -1291,7 +1366,7 @@ function App() {
         <section className="panel" aria-labelledby="judges-heading" id="judges">
           <div className="section-heading">
             <p className="eyebrow">Judges</p>
-            <h2 id="judges-heading">Panel members and affiliations</h2>
+            <h2 id="judges-heading">Review panel</h2>
           </div>
           <div className="judge-grid">
             {judges.map((judge) => (
@@ -1312,7 +1387,7 @@ function App() {
         <section className="panel" aria-labelledby="gallery-heading" id="gallery">
           <div className="section-heading">
             <p className="eyebrow">Event gallery</p>
-            <h2 id="gallery-heading">Moments captured at AI NEXUS</h2>
+            <h2 id="gallery-heading">Visual feed</h2>
           </div>
           <div className="gallery-grid">
             {(eventData?.photos ?? []).map((photo, index) => (
@@ -1326,7 +1401,20 @@ function App() {
               </article>
             ))}
             {(eventData?.photos ?? []).length === 0 ? (
-              <p className="empty-state">No event photos added yet.</p>
+              <>
+                <article className="gallery-card ai-placeholder-card ai-placeholder-1">
+                  <div className="ai-placeholder-image" role="img" aria-label="Abstract AI themed visual" />
+                  <p>AI concept frame</p>
+                </article>
+                <article className="gallery-card ai-placeholder-card ai-placeholder-2">
+                  <div className="ai-placeholder-image" role="img" aria-label="Creative futuristic event visual" />
+                  <p>Future scene</p>
+                </article>
+                <article className="gallery-card ai-placeholder-card ai-placeholder-3">
+                  <div className="ai-placeholder-image" role="img" aria-label="Vibrant digital art style visual" />
+                  <p>Nexus pulse</p>
+                </article>
+              </>
             ) : null}
           </div>
         </section>
@@ -1334,7 +1422,7 @@ function App() {
         <section className="panel" aria-labelledby="game-arena-heading" id="game-arena">
           <div className="section-heading">
             <p className="eyebrow">Game Arena</p>
-            <h2 id="game-arena-heading">Posted tasks, entry windows, and live scoring</h2>
+            <h2 id="game-arena-heading">Tasks and submissions</h2>
           </div>
           <div className="game-grid">
             {games.map((game) => {
@@ -1420,7 +1508,7 @@ function App() {
         <section className="panel" aria-labelledby="schedule-heading">
           <div className="section-heading">
             <p className="eyebrow">Schedule</p>
-            <h2 id="schedule-heading">Two days of focused hackathon activity</h2>
+            <h2 id="schedule-heading">Event timeline</h2>
           </div>
           <label className="search-field" htmlFor="schedule-search">
             Filter agenda items
@@ -1459,13 +1547,12 @@ function App() {
         <section className="panel" aria-labelledby="tracks-heading" id="tracks">
           <div className="section-heading">
             <p className="eyebrow">Tracks and themes</p>
-            <h2 id="tracks-heading">Problem areas teams can build for</h2>
+            <h2 id="tracks-heading">Build tracks</h2>
           </div>
           <div className="track-grid">
             {trackList.map((track) => (
               <article key={track} className="track-card">
                 <h3>{track}</h3>
-                <p>Focused challenge lane for impactful AI solutions at the hackathon.</p>
               </article>
             ))}
           </div>
@@ -1474,7 +1561,7 @@ function App() {
         <section className="panel" aria-labelledby="support-heading" id="support">
           <div className="section-heading">
             <p className="eyebrow">Contact and support</p>
-            <h2 id="support-heading">Help desk details for participants and teams</h2>
+            <h2 id="support-heading">Help desk</h2>
           </div>
           <div className="support-grid">
             {contactList.map((contact) => (

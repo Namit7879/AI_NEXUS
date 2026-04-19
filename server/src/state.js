@@ -6,22 +6,28 @@ function calculateLeaderboard(currentTeams) {
   return currentTeams
     .map((team) => ({
       teamId: team.id,
-      teamName: team.name,
-      college: team.college,
+      teamName: String(team.name ?? '').trim(),
+      college: String(team.college ?? '').trim(),
       total:
-        rounds.reduce((sum, round) => sum + (Number(team.scores[round.id]) || 0), 0) +
+        rounds.reduce((sum, round) => sum + (Number(team?.scores?.[round.id]) || 0), 0) +
         (Number(team.bonusPoints) || 0),
-      roundScores: { ...team.scores }
+      roundScores: { ...(team?.scores ?? {}) }
     }))
-    .sort((left, right) => right.total - left.total || left.teamName.localeCompare(right.teamName));
+    .sort(
+      (left, right) =>
+        right.total - left.total ||
+        left.teamName.localeCompare(right.teamName)
+    );
 }
 
 function cloneTeams(inputTeams) {
   return inputTeams.map((team) => ({
     ...team,
+    name: String(team?.name ?? '').trim(),
+    college: String(team?.college ?? '').trim(),
     members: Array.isArray(team.members) ? [...team.members] : [],
     bonusPoints: Number(team.bonusPoints) || 0,
-    scores: { ...team.scores }
+    scores: { ...(team?.scores ?? {}) }
   }));
 }
 

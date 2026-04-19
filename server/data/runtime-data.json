@@ -57,6 +57,538 @@
       "photoUrl": "/api/uploads/1776229453161-aa90ad6e329b.jpeg"
     }
   ],
-  "teams": [],
-  "games": []
+  "teams": [
+    {
+      "id": "team-001",
+      "name": "#Coders",
+      "college": "School Of Engineering & Technology, Shobhit University",
+      "members": ["Nipun", "Harshita Ahuja", "Yaksh Sehgal", "Sumit Kumar"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-002",
+      "name": "404 Trio Not Found",
+      "college": "COER University",
+      "members": ["Varun", "Paras Kaushik", "Krishna Goenka"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-003",
+      "name": "404BoysNotFound",
+      "college": "COER University",
+      "members": ["Kanak Sharma", "Himanshi Goyal", "Srishti", "Simran Bali"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-004",
+      "name": "7LabSolutions",
+      "college": "Baddi University of Emerging Sciences and Technology",
+      "members": ["Lavnish Kumar", "Rishita", "PRISHA AGGARWAL", "Harshit Arora"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-005",
+      "name": "A3K Bytes",
+      "college": "Baddi University of Emerging Sciences and Technology",
+      "members": ["Krishna", "Aishveer Kaur", "Aishita Manan", "Akshat Sharma"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-006",
+      "name": "AÂ²innovators",
+      "college": "JC Bose University of Science & Technology",
+      "members": ["Aditya Shingare", "Asmita Chautmal", "Shreya Dawkhar", "Siddhi Dhage"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-007",
+      "name": "Ace",
+      "college": "Symbiosis Institute of Technology",
+      "members": ["Sahil", "Kunal Choudhary", "Raghav", "Lucky Dewangan"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-008",
+      "name": "AI Visions",
+      "college": "Indian Institute of Technology, Patna",
+      "members": ["Himanshu Raj Giri", "Jay Prakash", "Roushan Kumar Singh", "Shreyas Aryan"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-009",
+      "name": "Astra One",
+      "college": "Plaksha University",
+      "members": ["Ankit Kumar Jha", "Raushan Maurya", "Nitin Patel", "Arpit Himanshu"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-010",
+      "name": "Avengers",
+      "college": "Chandigarh University",
+      "members": ["Sourabh Yadav", "Pushkar Sharma", "Siddharth Vats", "Riya Vishwakarma"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-011",
+      "name": "Bad Company",
+      "college": "COER University",
+      "members": ["Keshav Sharma", "Himanshu Yadav", "Bhumitkumar Sharma", "Aryan Shelke"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-012",
+      "name": "Binary Vortex",
+      "college": "Rajalakshmi Institute of Technology",
+      "members": ["Sameer Gehlot", "Riddhi Ranjan", "Purvi Soni", "Anshumaan Sharma"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-013",
+      "name": "Bridge",
+      "college": "Thapar University",
+      "members": ["Snidhi Yadav", "Sahil Hashmi", "Nikhil", "Shivam"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-014",
+      "name": "ByteBusters",
+      "college": "Rayat Bahra University",
+      "members": ["Khushi Gupta", "Nirjhar Saxena", "Deepanshu Kumar", "Pratul Nagpal"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-015",
+      "name": "CapyBara",
+      "college": "Lingayas University",
+      "members": ["Harshit Sharma", "Kartik", "Vishal Singh"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-016",
+      "name": "CloudMindAI",
+      "college": "JSPM University",
+      "members": ["Arnav Sharma", "Aditya Sood", "Bhanuja Sharma", "Abhinav Bansal"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-017",
+      "name": "Code Blooded",
+      "college": "Chandigarh University",
+      "members": ["Vaibhav Sharma", "Yogita kakkar", "Kratika Gupta", "Nishtha Singh"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-018",
+      "name": "Code Busterz",
+      "college": "DCRUST",
+      "members": ["Archi Misra Misra", "Samya Arya", "Sidhika Thakur", "Arya Vishwakarma"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-019",
+      "name": "CodeThinkers",
+      "college": "KCC Institute of Technology and Management",
+      "members": ["Nilanshu Sharma", "Rashi Saluja", "Manushk Kumar", "Naincy Negi"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-020",
+      "name": "Cyber Wizards",
+      "college": "College of Engineering Roorkee",
+      "members": ["Himani Dalvi", "Dhanishtha Deshpande", "Tanuja Deshmukh", "Khushboo Chandwani"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-021",
+      "name": "Dhurandhar",
+      "college": "Chandigarh University",
+      "members": ["Rohit", "Nikhil Saklani", "Kavya Sandal"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-022",
+      "name": "Digital Dominator",
+      "college": "Chandigarh University",
+      "members": ["Om Prakash", "Sanjna Sharma", "Ashi", "Rahul Sharma"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-023",
+      "name": "Elite Engineers",
+      "college": "Chandigarh University",
+      "members": ["Anshit Sharma", "Adit Mahajan", "Sahil Chauhan", "Kamakshi Sharma"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-024",
+      "name": "Error404",
+      "college": "Chitkara University",
+      "members": ["Sangam Pal", "Priyanshi", "Om kumar", "Mohd Kaif"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-025",
+      "name": "FAIRSIGHT AI",
+      "college": "The NorthCap University",
+      "members": ["Aahuti Chawla", "Aryan Vasdev", "Reedhima Juneja", "Daksh Sharma"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-026",
+      "name": "First Coder",
+      "college": "Chitkara University",
+      "members": ["Mumukshu Jain", "Prince Kumar", "Mayank", "Ishita Singh"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-027",
+      "name": "Fusion",
+      "college": "Jaypee Institute of Information Technology",
+      "members": ["Yesha Ravani", "Aadi Arora", "Dev Vasani", "Nandini Aggarwal"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-028",
+      "name": "hack homies",
+      "college": "ABESIT College of Engineering",
+      "members": ["Jayant Olhyan", "ARYAN JHA", "Ankit Chaudhary"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-029",
+      "name": "Hackoholic",
+      "college": "ABES Institute of Technology",
+      "members": ["Himanshu", "Niharika Dhiman", "Parth"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-030",
+      "name": "HackStorm",
+      "college": "IILM University",
+      "members": ["Nandini singh", "Yash Pathak", "Thinlay Namgyal", "Shubham kumar"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-031",
+      "name": "identif.ai",
+      "college": "State Institute of Engineering & Technology",
+      "members": ["Aarvee Sunil Wadhwa", "Raghav Dhoot", "Yashraj Shrivastava", "Shubhankar Sarangi"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-032",
+      "name": "Jaggers",
+      "college": "Chitkara University",
+      "members": ["Yash Awasthi", "Nishant Chaudhary", "Shourya Shukla", "Ujjual Mishra"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-033",
+      "name": "Kompasz",
+      "college": "ABESIT College of Engineering",
+      "members": ["Aditya Verma", "Karthik Verma", "Deepak Gupta", "Tanish Singla"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-034",
+      "name": "Leetchef",
+      "college": "Chandigarh University",
+      "members": ["Divyansh Kumar Thakur", "Arushi Gupta", "Bareha Mukhtar", "Harshita Sharma"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-035",
+      "name": "MedIntel",
+      "college": "Chitkara University",
+      "members": ["Suryasnat dash", "Tanya Chhetry", "Taniya Bhunia", "Lavanya Bhuria"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-036",
+      "name": "MediReach",
+      "college": "Amity University",
+      "members": ["Himanshu Singh", "Ayush Gupta", "Himesh Mishra", "Badri Vishal"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-037",
+      "name": "Meghan Srivastav",
+      "college": "Graphic Era University",
+      "members": ["Meghan Srivastav Gadvala", "Akash P", "Cheekatla B V S Yaswanth", "Saaket Elluru"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-038",
+      "name": "Neural Nexus",
+      "college": "Pranveer Singh Institute of Technology",
+      "members": ["Shubh Gupta", "Shreyansh Gupta", "Suhani singla", "Paras Kishan Jain", "preyansh", "Palak Kansal", "Shubham"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-039",
+      "name": "Neural Ninjas",
+      "college": "The ICFAI University",
+      "members": ["Kashish Aggarwal", "Ikra Saifi", "Himanshu Sharma", "Deepanshu"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-040",
+      "name": "NeuroAsphalt",
+      "college": "Graphic Era University",
+      "members": ["Gokulnath P", "Aswin J", "Ahmed Aslam Wajith I", "Harshavardhan E E"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-041",
+      "name": "NexAI",
+      "college": "Chandigarh University",
+      "members": ["Saksham Jain", "Gunvir Singh Ahluwalia", "Karanvir Singh", "Damanjit Singh"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-042",
+      "name": "NextGEN",
+      "college": "Bhagat Phool Singh Mahila Vishwavidyalaya",
+      "members": ["BOINI YADAGIRI", "Kundan Gurajada", "BANDI VARUN KUMAR", "E Ganga Narsimulu"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-043",
+      "name": "NextGen_coders",
+      "college": "Chitkara University",
+      "members": ["Kaushal Kumar", "Gaurav Agaria", "Shishant Singh", "Nitin Bhardwaj"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-044",
+      "name": "ORCAS",
+      "college": "JIMS Engineering Management Technical Campus",
+      "members": ["Ujjwal Bhardwaj", "Tarun Tomar", "Swaranjan Singh", "tanya sharma"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-045",
+      "name": "Potato Coders",
+      "college": "Chandigarh University",
+      "members": ["Sonal Goyal", "Kumud Aggarwal", "Tisha Sharma"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-046",
+      "name": "Quad GS",
+      "college": "The NorthCap University",
+      "members": ["Atul Ratan Sharma", "Indranil Lahiri", "Omkar Chaturbedi", "Sahil Anand"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-047",
+      "name": "Rasta",
+      "college": "MNNIT Allahabad",
+      "members": ["Aryan Mahajan", "Rojal", "Sukhmanjeet Singh", "Tamal Krishna Chhabra"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-048",
+      "name": "scallers",
+      "college": "Swami Vivekananda Institute of Technology",
+      "members": ["Atul Raj Gautam", "Chirag Pandey", "Arpit Pandey", "Arnav Gautam"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-049",
+      "name": "Shadow broker",
+      "college": "Maharishi Markandeshwar University",
+      "members": ["Harsh kumar", "Ashutosh", "Prince", "Ravi"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-050",
+      "name": "ShadowCoders",
+      "college": "Amity University",
+      "members": ["Ridhi Singla", "Raghav Agrawal", "Riya Makker", "Diksha Arora"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-051",
+      "name": "Spetsnaz",
+      "college": "SIES Graduate School of Technology",
+      "members": ["PUSHPENDER YADAV", "Prashant Rohilla", "Deepak Kumar", "Devesh Dwivedi"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-052",
+      "name": "Sunshine06",
+      "college": "Baddi University of Emerging Sciences and Technology",
+      "members": ["Vishwa S", "Madhankumar T", "Selvakumar K", "Madhan K"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-053",
+      "name": "SVAVS",
+      "college": "Chitkara University",
+      "members": ["Gadagoni Sharath", "Kasam Vivek Reddy", "Chimbili Sreekar", "Abhiram Garikapati"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-054",
+      "name": "Syntax And Chill",
+      "college": "KIET Group of Institutions",
+      "members": ["Bhumika Jain", "Yash Bishnoi", "Muskan Shah", "Anvi"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-055",
+      "name": "Team Cypher",
+      "college": "Dr. Akhilesh Das Gupta Institute of Technology and Management",
+      "members": ["Moksh Giri", "Tilak Soni", "Shashank Yadav", "Aditya Pathak"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-056",
+      "name": "Team Of Elites",
+      "college": "Medhavi Skills University",
+      "members": ["Namit Bhardwaj", "Mayank", "Lakshay Sharma", "RAJYAVARDHAN SINGH CHAUHAN"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-057",
+      "name": "TEAM VAAYU",
+      "college": "Chitkara University",
+      "members": ["Ayush Yadav", "Chirag Yadav", "Sakshamm Vipul Khanna", "Swyam"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-058",
+      "name": "Tech Buster",
+      "college": "Ramdeobaba University",
+      "members": ["Sushil Kumar Patra", "Vansh Rana", "Sushant Mahajan", "Priyansh Mangesh Kale"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-059",
+      "name": "Teen Titans",
+      "college": "SRM Institute of Science and Technology",
+      "members": ["Sudheer Kumar", "Akshat Agrawal", "Kaushik Bhadra", "Dhruv Raj"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-060",
+      "name": "Unstoppable",
+      "college": "The NorthCap University",
+      "members": ["Shivani Rai Rai", "Rimi Kumari", "Ashima Mittal", "Aarushi Kashyap Kashyap"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-061",
+      "name": "Vandalizers",
+      "college": "Baddi University of Emerging Sciences and Technology",
+      "members": ["Aditya Pandey", "Avik Srivastava", "Lavisha", "Sanya"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-062",
+      "name": "Views",
+      "college": "Dayalbagh Educational Institute",
+      "members": ["Vishnu Goswami", "Sakshi Dubey", "Shreesh Pandey", "Shreya Bharadwaj"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-063",
+      "name": "VisionX",
+      "college": "SGT University",
+      "members": ["Aditya Kumar", "Ankit Kumar", "Kajal Kumari", "Shivam kumar"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-064",
+      "name": "XVERSE",
+      "college": "Baddi University of Emerging Sciences and Technology",
+      "members": ["Kirti Bisht", "Lavika Panwar", "Disha Negi", "Harshita Dobhal"],
+      "bonusPoints": 0,
+      "scores": {}
+    },
+    {
+      "id": "team-065",
+      "name": "YakMind Squad",
+      "college": "Chandigarh University",
+      "members": ["Jamal Ahmad Faruki", "Anurag Kumar Jha", "Chhabi Raj Joshi", "Chandan Singh Bhandari"],
+      "bonusPoints": 0,
+      "scores": {}
+    }
+  ],
+  "games": [
+    {
+      "id": "addbf9fb-c2d7-4ed3-89c5-c3197751188c",
+      "title": "abc",
+      "description": "bnhjdbb",
+      "entryLabel": "Submission",
+      "deadline": "2026-04-20T20:15",
+      "rewardPoints": 10,
+      "acceptingEntries": true,
+      "submissions": []
+    }
+  ]
 }

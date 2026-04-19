@@ -11,7 +11,7 @@ export const event = {
 };
 
 export const judges = [
-  // Add judges manually from the admin panel.
+  //judges to be updated time to time after finalizing the list of judges for the event
 ];
 
 export const rounds = [
@@ -21,7 +21,72 @@ export const rounds = [
 ];
 
 export const teams = [
-  // Add teams manually from your data source.
+  "#Coders",
+"404 Trio Not Found",
+"404BoysNotFound",
+"7LabSolutions",
+"A3K Bytes",
+"AÂ²innovators",
+"Ace",
+"AI Visions",
+"Astra One",
+"Avengers",
+"Bad Company",
+"Binary Vortex",
+"Bridge",
+"ByteBusters",
+"CapyBara",
+"CloudMindAI",
+"Code Blooded",
+"Code Busterz",
+"CodeThinkers",
+"Cyber Wizards",
+"Dhurandhar",
+"Digital Dominator",
+"Elite Engineers",
+"Error404",
+"FAIRSIGHT AI",
+"First Coder",
+"Fusion",
+"hack homies",
+"Hackoholic",
+"HackStorm",
+"identif.ai",
+"Jaggers",
+"Kompasz",
+"Leetchef",
+"MedIntel",
+"MediReach",
+"Meghan Srivastav",
+"Neural Nexus",
+"Neural Nexus",
+"Neural Ninjas",
+"NeuroAsphalt",
+"NexAI",
+"NextGEN",
+"NextGen_coders",
+"ORCAS",
+"Potato Coders",
+"Quad GS",
+"Rasta",
+"scallers",
+"Shadow broker",
+"ShadowCoders",
+"Spetsnaz",
+"Sunshine06",
+"SVAVS",
+"Syntax And Chill",
+"Team Cypher",
+"Team Of Elites",
+"TEAM VAAYU",
+"Tech Buster",
+"Teen Titans",
+"Unstoppable",
+"Vandalizers",
+"Views",
+"VisionX",
+"XVERSE",
+"YakMind Squad"
 ];
 
 export const schedule = [
@@ -185,11 +250,11 @@ export const schedule = [
     title: 'Prize distribution - Hackathon winners',
     description: 'Announcement and recognition of top teams and special mentions.'
   },
-  {
-    time: 'Day 2 - 03:25 PM - 03:40 PM',
-    title: 'Prize distribution - Tech Treasure Hunt winners',
-    description: 'Recognition of the top treasure hunt teams and category winners.'
-  },
+  // {
+  //   time: 'Day 2 - 03:25 PM - 03:40 PM',
+  //   title: 'Prize distribution - Tech Treasure Hunt winners',
+  //   description: 'Recognition of the top treasure hunt teams and category winners.'
+  // },
   {
     time: 'Day 2 - 03:40 PM - 03:50 PM',
     title: 'Guest speech and closing remarks',
